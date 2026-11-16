@@ -6,7 +6,8 @@
 Paste a link to a short video of you running this assignment (tool + code + run).
 Work without a working video link is incomplete.
 
-**Your demo:** _add your link here_
+**Your demo:** [screen-capture (22).webm](https://github.com/user-attachments/assets/f6f75c14-6b71-405a-9770-475a04e2fd99) 
+
 
 **Week 12 · Project 3**  
 **Theme:** Project 2’s report, on fifty random scores  
