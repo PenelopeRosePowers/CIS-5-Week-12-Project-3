@@ -17,12 +17,29 @@ void countGrades(const int scores[], int n, int& a, int& b, int& c, int& d, int&
   // TODO: for loop. Add 1 to the matching count.
   // A is 90 and up. B is 80 to 89. C is 70 to 79. D is 60 to 69.
   // Failing is below 60. A 60 is a D. Do not print.
+  for (int i = 0; i < n; ++i){
+    if (scores[i] >= 90){
+      ++a;
+    } else if (scores[i] >= 80){
+      ++b;
+    } else if (scores[i] >= 70){
+      ++c;
+    } else if (scores[i] >= 60){
+      ++d;
+    } else {
+      ++failing;
+    }
+  }
 }
 
 double average(const int scores[], int n) {
   if (n <= 0 || scores == nullptr) return 0.0;
   // TODO: return the mean as a double (sum * 1.0 / n). Do not print.
-  return 0.0;
+  int sum = 0;
+  for (int i = 0; i < n; ++i){
+    sum += scores[i];
+  }
+  return sum * 1.0/n;
 }
 
 void officeHours(const int scores[], int n, int* failingCount) {
@@ -32,6 +49,18 @@ void officeHours(const int scores[], int n, int* failingCount) {
   // Student at index i needs to come to office hours.
   // If failingCount is not nullptr, write how many lines you printed
   // through *failingCount. If it is nullptr, do not write through it.
+  int count  = 0;
+  int i = 0;
+  while (i < n){
+    if (scores[i] < 60){
+      std::cout << "Student at index " << i << " needs to come to office hours. \n";
+      ++count;
+    }
+    ++i;
+  }
+if (failingCount != nullptr){
+  *failingCount = count; 
+  }
 }
 
 int main() {
